@@ -24,6 +24,9 @@
     <ClInclude Include="..\include\SudokuSolver.h">
       <Filter>Include</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\PerformanceScopeTimer.h">
+      <Filter>Include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\Logger.cpp">
@@ -36,6 +39,9 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="..\source\SudokuSolver.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\PerformanceScopeTimer.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>

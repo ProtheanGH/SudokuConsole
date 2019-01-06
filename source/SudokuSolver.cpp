@@ -382,7 +382,7 @@ void SudokuSolver::FindSolution()
 
           // Remove it from the empty slots vector
           // TODO-OPT: there's gotta be a better way than doing this
-          for(int i = 0; i < empty_slots.size(); ++i)
+          for(size_t i = 0; i < empty_slots.size(); ++i)
           {
             if(empty_slots[i] == newly_single_slots[0])
             {
@@ -410,32 +410,7 @@ void SudokuSolver::FindSolution()
 
         was_found = false;
         // Check the 3x3 group
-        //CheckGroupForPossibleNumbers(empty_slots[0], empty_slots[0]->_possible_values, empty_slots[0]->_group, was_found);
-
-        // TESTING-ONLY
-        for(auto values_iter = empty_slots[0]->_possible_values.begin(); values_iter != empty_slots[0]->_possible_values.end(); ++values_iter)
-        {
-          was_found = false;
-          for(auto slot_iter = empty_slots[0]->_group->begin(); slot_iter != empty_slots[0]->_group->end(); ++slot_iter)
-          {
-            if(*slot_iter == empty_slots[0])
-            {
-              continue;
-            }
-            SearchVectorForNumber((*slot_iter)->_possible_values, *values_iter, was_found);
-            if(was_found == true)
-            {
-              break;
-            }
-          }
-          if(was_found == false)
-          {
-            empty_slots[0]->_value = *values_iter;
-            empty_slots[0]->_possible_values.clear();
-            break;
-          }
-        }
-        // TESTING-END
+        CheckGroupForPossibleNumbers(empty_slots[0], empty_slots[0]->_possible_values, empty_slots[0]->_group, was_found);
 
         if(was_found == false)
         {

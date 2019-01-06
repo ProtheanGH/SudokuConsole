@@ -157,11 +157,13 @@
   <ItemGroup>
     <ClInclude Include="..\include\Logger.h" />
     <ClInclude Include="..\include\pch.h" />
+    <ClInclude Include="..\include\PerformanceScopeTimer.h" />
     <ClInclude Include="..\include\SudokuSolver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\source\Logger.cpp" />
     <ClCompile Include="..\source\pch.cpp" />
+    <ClCompile Include="..\source\PerformanceScopeTimer.cpp" />
     <ClCompile Include="..\source\SudokuConsole.cpp" />
     <ClCompile Include="..\source\SudokuSolver.cpp" />
   </ItemGroup>

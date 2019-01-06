@@ -43,7 +43,6 @@ private:
   void VisualizeDataGroups() const;
   void DeterminePossibleValues();
   void VisualizePossibleValues(int row, int column) const;
-  void VisualizePossibleValueGrid() const;
   void FindSolution();
 
   //! The Sudoku Puzzle in the form of a 2D array that matches how it gets displayed (rows and columns)
